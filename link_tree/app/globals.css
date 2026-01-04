@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+
+:root {
+  scrollbar-width: none; 
+  margin: 0;
+  padding: 0;
+}
+
+input[type='text']{
+  background-color: rgba(0, 0, 0, 0.3);
+  padding:5px 10px;
+  border-radius: 25px;
+  margin-left:15px;
+}
+
+
+@media screen and (min-width:540px) and (max-width:1800px){
+  section{
+    display: flex;
+    flex-direction: row;
+  } 
+  .imgs{
+    display: flex;
+    flex-direction: column;
+  } 
+  .img{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:100px) and (max-width:520px){
+  nav{
+    font-size: smaller;
+  }
+  .right{
+    width: 75%;
+  }
+  .bt-1,.bt-2{
+    display: none;
+  }
+  img,.col_2{
+    border:none;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; 
+  scrollbar-width: none;
+}
+
+.loader {
+  animation: spin 2.2s linear infinite;
+}
+.loader1{
+  animation: spin infinite 2.2s 0.5s;
+}
+.loader2{
+  animation: spin infinite 2.2s 0.5s;
+}
+.loader3{
+  animation: spin infinite 2.2s 0.5s alternate-reverse;
+}
+.loader4{
+  animation: spin infinite 2.2s 0.5s alternate-reverse;
+}
+
+
