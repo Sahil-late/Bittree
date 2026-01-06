@@ -8,12 +8,11 @@ import Link from 'next/link';
 import { usePathname } from "next/navigation";
 import { useRouter } from 'next/navigation';
 
-
 const Navbar = () => {
   const router = useRouter()
   const pathname = usePathname();
   const [color, setColor] = useState(true)
-  const [content, setContent] = useState(false)
+  const [content, setContent] = useState(false)  
   const showNavbar = ["/","/generate"].includes(pathname);
 
   useEffect(() => {

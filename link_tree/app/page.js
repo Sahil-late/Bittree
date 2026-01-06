@@ -15,7 +15,4 @@ export default function Home() {
   );
 }
 
-export const metadata = {
-  title: "BitTree - Your Favourite Link Sharing Site",
-  description: "We Brought A Revolution In Link Sharing",
-};
+

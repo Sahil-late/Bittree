@@ -11,7 +11,6 @@ export default function Page({ params }) {
   const router = useRouter();
   const [data, setData] = useState()
   const [loader, setLoader] = useState(false)
-  console.log(data);
 
   useEffect(() => {
     async function load() {

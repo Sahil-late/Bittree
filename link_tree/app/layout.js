@@ -23,6 +23,11 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/png" href="/icon.png" />
+      <title>BitTree - Your Favourite Link Sharing Site</title>
+        <meta name="description" content="We Brought A Revolution In Link Sharing" />
+        </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-amber-300`}
   >
@@ -32,3 +37,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
