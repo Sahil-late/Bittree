@@ -10,11 +10,27 @@ import Loader from '../components/StylishLoader'
 
 
 const Page = () => {
-  const [loader, setLoader] = useState(false)
   const searchParams = useSearchParams();
-  const [handle, setHandle] = useState(searchParams.get('handle') || '')
-  const [links, setLinks] = useState(JSON.parse(searchParams.get('links')) || [{ link: '', linkText: '' }])
-  const [pics, setPics] = useState(searchParams.get('pics') || '')
+
+  const [loader, setLoader] = useState(false);
+  const [handle, setHandle] = useState('');
+  const [links, setLinks] = useState([{ link: '', linkText: '' }]);
+  const [pics, setPics] = useState('');
+
+  useEffect(() => {
+    const h = searchParams.get('handle') || '';
+    const l = searchParams.get('links');
+    const p = searchParams.get('pics') || '';
+
+    setHandle(h);
+    setPics(p);
+
+    try {
+      setLinks(l ? JSON.parse(l) : [{ link: '', linkText: '' }]);
+    } catch (err) {
+      setLinks([{ link: '', linkText: '' }]);
+    }
+  }, [searchParams]);
 
   const handlesubmit = async () => {
     try {
