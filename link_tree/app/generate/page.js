@@ -1,14 +1,7 @@
-// app/generate/ClientWrapper.js
+// app/generate/page.js
 'use client'
-import React, { Suspense } from 'react'
-import dynamic from 'next/dynamic'
+import ClientWrapper from './clientWrapper'
 
-const ClientGenerate = dynamic(() => import('./ClientGenerate'), { ssr: false })
-
-export default function ClientWrapper() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ClientGenerate />
-    </Suspense>
-  )
+export default function Page() {
+  return <ClientWrapper />
 }
