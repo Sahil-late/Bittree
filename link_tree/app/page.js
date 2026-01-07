@@ -7,11 +7,10 @@ import styles from "../Carousel.module.css"
 
 export default function Home() {
   return (
-    <main className={`flex flex-col gap-2.5 }`}>
+    <main className={`flex flex-col gap-2.5 bg-yellow-600`}>
       <Page1/>
       <Page2/>
     </main>
-
   );
 }
 

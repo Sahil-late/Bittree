@@ -64,18 +64,18 @@ const Page = () => {
         }
     }
     return (
-        <div className='relative h-screen bg-gray-950 w-screen text-amber-100 flex items-center justify-center'>
+        <div className='relative h-dvh bg-gray-950 w-screen text-amber-100 flex items-center justify-center'>
             {loader && <Loader />}
             <div className='flex sm:w-1/2 w-[90vw] flex-col items-center gap-5' >
                 <input onKeyDown={(e) => { if (e.key === 'Enter') handleCheck(handle) }} type="text" onChange={e => setHandle(e.target.value)} value={handle} className='border w-full' placeholder='Enter Handle Name' />
                 <button onClick={() => handleCheck(handle)} className='text-blue-900 border-2  text-center px-1 rounded-lg bg-[rgba(255,255,255,0.7)] hover:bg-[rgba(255,255,255,0.9)]  active:border-amber-700 cursor-pointer'>Check</button>
-            </div>
-            <ToastContainer />
-            <div className='absolute bottom-7.5'>
+                <div className='absolute bottom-15.5'>
                 <Link href={'/generate'}>
                     <button className='invert  bg-gray-800 p-2 flex justify-center items-center  rounded-full text-amber-50 border-3 border-white hover:border-amber-700 active:border-red-400 disabled:bg-gray-900'>Back To Genrate</button>
                 </Link>
             </div>
+            </div>
+            <ToastContainer />
         </div>
     )
 }

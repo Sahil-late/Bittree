@@ -17,7 +17,7 @@ const Navbar = () => {
 
   useEffect(() => {
       setColor(true)
-    }, [content])
+    }, [content,showNavbar])
 
   const bg = () => {
     if (!color) return
@@ -34,6 +34,7 @@ const Navbar = () => {
   const handleColor = () => {
     setColor(true)
   }
+
 
   return (
     <>

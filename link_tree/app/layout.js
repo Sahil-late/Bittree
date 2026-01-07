@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content="We Brought A Revolution In Link Sharing" />
         </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-amber-300`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen bg-gray-900 overflow-x-hidden`}
   >
       <Navbar />
       {children} 

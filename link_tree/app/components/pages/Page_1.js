@@ -23,6 +23,9 @@ export default function Page() {
     if (text.includes('linktr.ee/')) {
       link = text.split('linktr.ee/')[1];
     }
+    else{
+      link = text;
+    }
 
     if (!link || link.length < 2 || link.length > 12) {
       toast.error("Please enter a valid handle between 2 - 12 characters");
@@ -93,7 +96,7 @@ export default function Page() {
   return (
     <main className="relative">
       {loader && <Loader/>}
-      <section className={`flex flex-col h-[70vh] bg-amber-500 border-2 w-[100vw] ${loader ? 'opacity-50 pointer-events-none' : ''} md:flex-row`}>
+      <section className={`flex flex-col h-[70dvh] bg-amber-500 border-2 w-[100vw] ${loader ? 'opacity-50 pointer-events-none' : ''} md:flex-row`}>
         <div className="col_1 h-full flex items-center p-2 bg-amber-200">
           <div className="flex flex-col gap-2.5">
             <h2 className={`${poppins.className} text-center text-xl`}>A link in bio built for you.</h2>
