@@ -97,10 +97,10 @@ export default function Page() {
     <main className="relative">
       {loader && <Loader/>}
       <section className={`flex flex-col h-[70dvh] bg-amber-500 border-2 w-[100vw] ${loader ? 'opacity-50 pointer-events-none' : ''} md:flex-row`}>
-        <div className="col_1 h-full flex items-center p-2 bg-amber-200">
-          <div className="flex flex-col gap-2.5">
+        <div className="col_1 h-full  flex items-center p-2 bg-amber-200">
+          <div className="pt-24 flex flex-col gap-2.5">
             <h2 className={`${poppins.className} text-center text-xl`}>A link in bio built for you.</h2>
-            <p className="text-[14px] px-3.5">Join 70M+ people using Linktree for their link in bio. One link to help you share everything you create, curate and sell from your Instagram, TikTok, Twitter, YouTube and other social media profiles.</p>
+            <p className="view text-[14px] px-3.5">Join 70M+ people using Linktree for their link in bio. One link to help you share everything you create, curate and sell from your Instagram, TikTok, Twitter, YouTube and other social media profiles.</p>
             <div className="flex justify-center gap-2">
               <input onKeyDown={(e) => {
                 if (e.key === 'Enter') {

@@ -283,7 +283,7 @@ const Page = () => {
   return (
     <div className='bg-amber-100 grid lg:grid-cols-2'>
       {loader && <Loader />}
-      <div className="col1 h-screen w-full flex justify-center items-center">
+      <div className="col_1 h-screen w-full flex justify-center items-center">
         <div className='flex flex-col w-full gap-8'>
           <header>
             <div className="logos">
@@ -294,15 +294,15 @@ const Page = () => {
             </div>
           </header>
           <div className="inputs flex flex-col w-[80%] mx-auto gap-2.5 ">
-            <h2>step 1: Claim Your Handle</h2>
+            <h2 className='steps'>step 1: Claim Your Handle</h2>
             <div className='relative'>
               <input onKeyDown={(e)=> {if(e.key === 'Enter')handleFetch()}} onChange={(e) => setHandle(e.target.value)} value={handle} className='focus:outline-amber-400 w-[96.5%]' name='handle' type="text" placeholder='Choose a Handle' required />
               <div className="absolute right-0 top-[-2]">
                 <button onClick={handleFetch} className='bg-gray-800 w-9 h-9 flex justify-center items-center  rounded-full text-amber-50 border-2 border-black hover:border-amber-50 active:border-green-400 disabled:bg-gray-600'><MdFindReplace /></button>
               </div>
             </div>
-            <h2>step 2: Add Links</h2>
-            <div className="size pr-3 h-[calc(100vh-550px)] w-full flex flex-col gap-2.5 bg-[rgba(0,0,0,0.1)] overflow-y-auto border border-gray-500 p-2 rounded-md no-scrollbar">
+            <h2 className='steps'>step 2: Add Links</h2>
+            <div className="size pr-3 h-[calc(100vh-450px)] w-full flex flex-col gap-2.5 bg-[rgba(0,0,0,0.1)] overflow-y-auto border border-gray-500 p-2 rounded-md no-scrollbar">
               {
                 links.map((item, index) => (
                   <div key={index} className="links w-full flex">
@@ -314,7 +314,7 @@ const Page = () => {
               }
             </div>
             <button onClick={handleAdd} className='bg-gray-800 ml-4 rounded-2xl py-1 text-amber-50 border-2 hover:border-gray-700 active:border-red-400'>Add Links</button>
-            <h2>step 2: Add Picture And Finalize</h2>
+            <h2 className='steps'>step 3: Add Picture And Finalize</h2>
             <input onKeyDown={(e) => { if (e.key === 'Enter') { return handlesubmit() } }
             } onChange={(e) => setPics(e.target.value)} value={pics} name='pics' type="text" className=' focus:outline-amber-400' placeholder='Create Your Bittree' />
             <div className='flex'>
