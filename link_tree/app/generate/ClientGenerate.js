@@ -302,7 +302,7 @@ const Page = () => {
               </div>
             </div>
             <h2 className='steps'>step 2: Add Links</h2>
-            <div className="size pr-3 h-[calc(100vh-450px)] w-full flex flex-col gap-2.5 bg-[rgba(0,0,0,0.1)] overflow-y-auto border border-gray-500 p-2 rounded-md no-scrollbar">
+            <div className="size pr-3 h-[calc(100dvh-450px)] w-full flex flex-col gap-2.5 bg-[rgba(0,0,0,0.1)] overflow-y-auto border border-gray-500 p-2 rounded-md no-scrollbar">
               {
                 links.map((item, index) => (
                   <div key={index} className="links w-full flex">
